@@ -59,3 +59,55 @@
     - utter_goodbye
 * stop
     - utter_goodbye
+
+## interactive_story_1
+* search_weather{"city": "Pune"}
+    - slot{"city": "Pune"}
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"city": "Pune"}
+    - slot{"city": "Pune"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+
+## interactive_story_1
+* search_weather{"city": "London"}
+    - slot{"city": "London"}
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"city": "London"}
+    - slot{"city": "London"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* search_weather
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"requested_slot": "city"}
+* form: inform{"city": "Pune"}
+    - slot{"city": "Pune"}
+    - form: weather_form
+    - slot{"city": "Pune"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* inform{"city": "Mumbai"}
+    - slot{"city": "Mumbai"}
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"city": "Mumbai"}
+    - slot{"city": "Mumbai"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* search_weather{"city": "Nagpur"}
+    - slot{"city": "Nagpur"}
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"city": "Nagpur"}
+    - slot{"city": "Nagpur"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* goodbye
+    - utter_goodbye

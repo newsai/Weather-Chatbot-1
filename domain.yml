@@ -8,16 +8,18 @@ actions:
 - utter_greet
 - utter_happy
 - utter_submit
+- utter_wrong_city
 entities:
 - city
 forms:
 - weather_form
 intents:
+- search_weather
+- inform
+- goodbye
 - stop
 - bot_functions
-- search_weather
 - greet
-- goodbye
 - affirm
 - deny
 - mood_great
@@ -34,6 +36,8 @@ templates:
   - text: Which city
   utter_bot_functions:
   - text: I can search weather for you.
+  utter_wrong_city:
+  - text: City not found
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'

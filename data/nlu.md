@@ -31,6 +31,8 @@
 - bye
 - bye
 - bye
+- bye
+- bye
 
 ## intent:greet
 - hey
@@ -42,6 +44,18 @@
 - hi
 - hi
 - hi
+
+## intent:inform
+- for [Delhi](City)
+- [Punjab](City)
+- search for [Noida](city)
+- search for [Noida](city) location
+- city is [Nagpur](city)
+- for [Pune](city) location
+- I am looking for [Mumbai](city)
+- [Pune](city)
+- search for [Mumbai](city)
+-[Gorkhā](city)
 
 ## intent:mood_great
 - perfect
@@ -74,6 +88,10 @@
 - weather for [London](city) [UK](country)
 - what is weather for [Pune](city)
 - what is the weather for [Pune](city)
+- current weather for [Pune](city)
+- what is current weather for [London](city)
+- what is current weather
+- what is current weather for [Nagpur](city)
 
 ## intent:stop
 - /stop
