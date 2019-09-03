@@ -1,0 +1,60 @@
+%YAML 1.1
+---
+actions:
+- utter_bot_functions
+- utter_cheer_up
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_submit
+entities:
+- city
+forms:
+- weather_form
+intents:
+- stop
+- bot_functions
+- search_weather
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+slots:
+  city:
+    type: text
+  country:
+    type: text
+  requested_slot:
+    type: unfeaturized
+templates:
+  utter_ask_city:
+  - text: Which city
+  utter_bot_functions:
+  - text: I can search weather for you.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - buttons:
+    - payload: /bot_functions
+      title: What can you do?
+    text: Hi! I am a weather bot.
+  - buttons:
+    - payload: /bot_functions
+      title: What can you do?
+    text: Hello! What can I do for you?
+  - buttons:
+    - payload: /bot_functions
+      title: What can you do?
+    text: Hi! What's up?
+  utter_happy:
+  - text: Great carry on!
+  utter_submit:
+  - text: Submitting...
