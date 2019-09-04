@@ -33,6 +33,8 @@
 - bye
 - bye
 - bye
+- bye
+- bye
 
 ## intent:greet
 - hey
@@ -44,10 +46,11 @@
 - hi
 - hi
 - hi
+- hi
 
 ## intent:inform
-- for [Delhi](City)
-- [Punjab](City)
+- for [Delhi](city)
+- [Punjab](city)
 - search for [Noida](city)
 - search for [Noida](city) location
 - city is [Nagpur](city)
@@ -55,44 +58,67 @@
 - I am looking for [Mumbai](city)
 - [Pune](city)
 - search for [Mumbai](city)
--[Gorkhā](city)
+- [Gorkhā](city)
+- [Pune](city)
+- for [Nagpur](city)
+- temperature for [Nagpur](city)
+- [Mumbai](city)
+- [Lichtenrade](city)
+- [Mumbai](city)
+- and for [Pune](city)
+- [Nagpur](city)
 
-## intent:mood_great
+## intent:praise
 - perfect
 - very good
 - great
 - amazing
 - wonderful
-- I am feeling very good
-- I am great
-- I'm good
+- you are perfect
+- Thanks
+- you made my day
+- you are amazing
 
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
+## intent:search_temperature
+- what is current temperature
+- today's temprature for [Holubynka](city)
+- current temperature of [Vinogradovo](city)
+- is it hot today
+- is is cold today
+- today temperature
+- is [Lichtenrade](city) today
+- current temperature for [Pune](city)
+- temperature for [Nagpur](city)
+- temperature for [Pune](city)
+- what is current temperature
+- today temperature
+- what is current temperature
+- is it hot today
 
 ## intent:search_weather
 - what is the current weather
 - what is the weather for [Pune](city)
-- what is current weather for [Patna](city) in [India](country)
-- tell me weather for [Mumbai](city)[India](country)
+- what is current weather for [Patna](city)
+- tell me weather for [Mumbai](city)
 - weather for [Delhi](city)
-- weather for [London](city) [UK](country)
+- weather for [London](city)
 - what is weather for [Pune](city)
 - what is the weather for [Pune](city)
 - current weather for [Pune](city)
 - what is current weather for [London](city)
 - what is current weather
 - what is current weather for [Nagpur](city)
+- weather for [Pune](city)
+- weather for [London](city)
 
 ## intent:stop
 - /stop
 - /stop
+
+## intent:unhappy
+- unhappy
+- bad
+- very bad
+- awful
+- terrible
+- not very good
