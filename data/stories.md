@@ -7,14 +7,14 @@
 ## sad path 1
 * greet
   - utter_greet
-* unhappy
-  - utter_unhappy
+* insult
+  - utter_handleinsult
 
 ## sad path 2
 * greet
   - utter_greet
-* unhappy
-  - utter_unhappy
+* insult
+  - utter_handleinsult
 * goodbye
   - utter_goodbye
 
@@ -25,14 +25,14 @@
 ## bot_functions 
 * greet
   - utter_greet
-* bot_functions
-  - utter_bot_functions
+* ask_whatspossible
+    - action_chitchat
 
 ##story_form
 * greet
     - utter_greet
-* bot_functions
-    - utter_bot_functions
+* ask_whatspossible
+    - action_chitchat
 * search_weather
     - weather_form
     - form{"name": "weather_form"}
@@ -40,12 +40,42 @@
 * praise
   - utter_praise
 
+##story_chitchat
+* greet
+    - utter_greet
+* ask_whatspossible
+    - action_chitchat
+* ask_howold
+    - action_chitchat
+* ask_isbot
+    - action_chitchat
+* ask_languagesbot
+    - action_chitchat
+* ask_time
+    - action_chitchat
+* ask_whatismyname
+    - action_chitchat
+* ask_wherefrom
+    - action_chitchat
+* ask_whoami
+    - action_chitchat
+* ask_builder
+    - action_chitchat
+* ask_howdoing
+    - action_chitchat
+* ask_whatspossible
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+
 
 ## Generated Story 3183310183320455154
 * greet
     - utter_greet
-* bot_functions
-    - utter_bot_functions
+* ask_whatspossible
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
 * search_weather{"city": "Pune"}
     - slot{"city": "Pune"}
     - weather_form
@@ -54,11 +84,9 @@
     - slot{"city": "Pune"}
     - form{"name": null}
     - slot{"requested_slot": null}
-* unhappy
-  - utter_unhappy
+* insult
+  - utter_handleinsult
 * goodbye
-    - utter_goodbye
-* stop
     - utter_goodbye
 
 ## interactive_story_1
@@ -70,8 +98,8 @@
     - slot{"city": "Pune"}
     - form{"name": null}
     - slot{"requested_slot": null}
- * unhappy
-  - utter_unhappy
+ * insult
+  - utter_handleinsult
 
 ## interactive_story_1
 * search_weather{"city": "London"}
@@ -234,3 +262,38 @@
     - utter_praise
 * goodbye
     - utter_goodbye
+    
+    
+## fallback story
+* greet
+  - utter_greet
+* out_of_scope
+  - action_default_fallback
+* greet
+  - utter_greet
+
+## interactive_story_1
+* ask_whoisit
+    - action_chitchat
+* ask_whatspossible
+    - action_chitchat
+* ask_howold
+    - action_chitchat
+* ask_builder
+    - action_chitchat
+* ask_whoami
+    - action_chitchat
+* ask_time
+    - action_chitchat
+* ask_languagesbot
+    - action_chitchat
+* ask_howdoing
+    - action_chitchat
+* ask_isbot
+    - action_chitchat
+* ask_wherefrom
+    - action_chitchat
+* ask_whatspossible
+    - action_chitchat
+* out_of_scope
+  - action_default_fallback

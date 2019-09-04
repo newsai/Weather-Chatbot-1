@@ -1,42 +1,86 @@
 %YAML 1.1
 ---
 actions:
-- utter_bot_functions
+- action_chitchat
+- utter_ask_rephrase
 - utter_goodbye
 - utter_greet
 - utter_praise
 - utter_submit
-- utter_unhappy
 - utter_wrong_city
+- utter_handleinsult
 entities:
 - city
 forms:
 - temperature_form
 - weather_form
 intents:
+- ask_whoami
+- ask_isbot
+- ask_whatspossible
+- ask_howold
+- ask_languagesbot
+- ask_builder
+- ask_time
+- ask_wherefrom
+- ask_howdoing
+- ask_whoisit
+- insult
 - praise
 - greet
 - search_temperature
 - inform
 - goodbye
 - search_weather
-- stop
-- bot_functions
 - affirm
 - deny
-- unhappy
+- out_of_scope
+- ask_whatismyname
 slots:
   city:
     type: text
-  country:
-    type: text
-  requested_slot:
-    type: unfeaturized
 templates:
+  utter_ask_builder:
+  - text:  A samrt engineer named Guru
+  - text: One of the smart engineers! 🧠
   utter_ask_city:
-  - text: Which city
-  utter_bot_functions:
+  - text: Which city?
+  utter_ask_howdoing:
+  - text: I'm great! Thanks for asking.
+  - text: I'm good, thanks!
+  - text: A little bit too warm, otherwise fine.
+  utter_ask_howold:
+  - text: 18+
+  - text: Old enough to be a bot.
+  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t
+      matter.
+  utter_ask_isbot:
+  - text: Yep, I'm a bot!
+  utter_ask_languagesbot:
+  - text: I can spell baguette in French, but unfortunately English is the only language
+      I can answer you in.
+  - text: I am in the process of learning, but at the moment I can only speak English.
+  utter_ask_rephrase:
+  - text: Can you please rephrase that
+  utter_ask_time:
+  - text: It's the most wonderful time of the year!
+  utter_ask_whatismyname:
+  - text: It's probably the one that your parents chose for you.
+  utter_ask_whatspossible:
   - text: I can search weather for you.
+  - text: I can tell you about the weather for a city.
+  utter_ask_wherefrom:
+  - text: I was born in Pune, but I consider myself a citizen of the world.
+  - text: I was born in the coolest city on Earth.
+  utter_ask_whoisit:
+  - text: I'm the Rasa bot who can answer weather query! 🤖
+  utter_handleinsult:
+    - text: That’s not very nice 😢
+    - text: Soory to hear that. I will improve myself
+    - text: Seems I need more training
+    - text: Thanks for your feedback. I will work on myself
+  utter_default:
+  - text: Sorry, I did not undertand.
   utter_goodbye:
   - text: Bye
   utter_greet:
@@ -49,9 +93,5 @@ templates:
   - text: you are welcome
   utter_submit:
   - text: Submitting...
-  utter_unhappy:
-  - text: Soory to hear that. I will improve myself
-  - text: Seems I need more training
-  - text: Thanks for your feedback. I will work on myself
   utter_wrong_city:
-  - text: City not found
+  - text: city not found

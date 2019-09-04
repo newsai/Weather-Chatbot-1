@@ -10,24 +10,47 @@ logger = logging.getLogger(__name__)
 
 class WeatherSearch(object):
     def __init__(self):
-        self.api_id = 'XXX'
+        self.api_id = 'XXXX'
 
     def searchByName(self, city_name):
         # do search here
         url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'.format(city_name, self.api_id)
-        print(url)
         result = requests.get(url).json()
-        print(result)
-
         return result
 
-    def searchByCity_country(self, city, country):
-        # do search here
-        return {"dummy": "Sunny"}
 
-    def searchById(self, city_id):
-        # do search here
-        return {"dummy": "Clear"}
+class ActionChitchat(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self):
+        return "action_chitchat"
+
+    def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message["intent"].get("name")
+
+        # retrieve the correct chitchat utterance dependent on the intent
+        if intent in [
+            "ask_builder",
+            "ask_weather",
+            "ask_howdoing",
+            "ask_whatspossible",
+            "ask_whatisrasa",
+            "ask_isbot",
+            "ask_howold",
+            "ask_languagesbot",
+            "ask_restaurant",
+            "ask_time",
+            "ask_wherefrom",
+            "ask_whoami",
+            "handleinsult",
+            "nicetomeeyou",
+            "telljoke",
+            "ask_whatismyname",
+            "ask_howbuilt",
+            "ask_whoisit",
+        ]:
+            dispatcher.utter_template("utter_" + intent, tracker)
+        return []
 
 
 class WeatherActions(Action):
@@ -44,33 +67,9 @@ class WeatherForm(FormAction):
     def name(self):  # type: () -> Text
         return "weather_form"
 
-    # def get_city_list(self, name):
-    #     #load json
-    #     #search city
-    #     return None
-
-    # # @staticmethod
-    # def validate_city(self, slot_dict, dispatcher, tracker, domain):  # type: (Dict[Text, Any], CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
-    #     print(slot_dict)
-    #     import pdb
-    #     pdb.set_trace()
-    #     city = slot_dict.lower()
-    #     city_list = find_city(city)
-    #     if len(city_list) == 1:
-    #         print(city_list)
-    #         city_name= city_list[0]['name']
-    #         country_code = city_list[0]['country']
-    #         SlotSet("country",country_code)
-    #         return {"city": city_name}
-    #     else:
-    #         dispatcher.utter_template("utter_wrong_city", tracker)
-    #         return [SlotSet("city", None), SlotSet("country", None)]
-
     @staticmethod
     def required_slots(tracker):  # type: (Tracker) -> List[Text]
         return ["city"]
-
-
 
     def submit(self, dispatcher, tracker,
                domain):  # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
@@ -78,11 +77,20 @@ class WeatherForm(FormAction):
         city = tracker.get_slot('city')
         result = weather_info.searchByName(city)
         logger.info(result)
-        result_dict = bot_util.create_message(result)
-        dispatcher.utter_message('Weather for {} is {}. Temperature is {} kelvin, humidity is {} and wind speed is {}'.format(city,
-                                                                     result_dict['weather'],
-                                                                     result_dict['temp'], result_dict['humidity'],
-                                                                     result_dict['wind_speed']))
+        if result['cod'] == 200:
+            result_dict = bot_util.create_message(result)
+            dispatcher.utter_message(
+                'Weather for {} is {}. Temperature is {:4.2f} C, humidity is {} % and wind speed is {} mps'.format(city,
+                                                                                                             result_dict[
+                                                                                                                 'weather'],
+                                                                                                             int(result_dict[
+                                                                                                                 'temp']) -273.15,
+                                                                                                             result_dict[
+                                                                                                                 'humidity'],
+                                                                                                             result_dict[
+                                                                                                                 'wind_speed']))
+        else:
+            dispatcher.utter_message(result['message'])
         return [SlotSet("city", None)]
 
 
@@ -96,10 +104,13 @@ class TemperatureAction(FormAction):
 
     def submit(self, dispatcher, tracker,
                domain):  # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
-        weatherInfp = WeatherSearch()
+        weather_info = WeatherSearch()
         city = tracker.get_slot('city')
-        result = weatherInfp.searchByName(city)
-        logger.info(result)
-        result_dict = bot_util.create_message(result)
-        dispatcher.utter_message('Temperature for {} is {} kelvin'.format(city, result_dict['temp']))
+        result = weather_info.searchByName(city)
+        logger.info('Result from API:{}'.format(result))
+        if result['cod'] == 200:
+            result_dict = bot_util.create_message(result)
+            dispatcher.utter_message('Temperature for {} is {:4.2f} C'.format(city, int(result_dict['temp']) -273.15))
+        else:
+            dispatcher.utter_message(result['message'])
         return [SlotSet("city", None)]
