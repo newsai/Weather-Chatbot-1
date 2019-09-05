@@ -1,6 +1,3 @@
-## lookup:city
-   data/city_list.txt
-   
 ## intent:affirm
 - yes
 - indeed
@@ -154,6 +151,7 @@
 - how are you doing?
 - how are u
 - How are you?
+- how are you
 - how are you
 
 ## intent:ask_howold
@@ -593,6 +591,8 @@
 - then bye
 - tschüssikowski
 - bye!
+- bye
+- bye
 
 ## intent:greet
 - Hi
@@ -662,6 +662,9 @@
 - good evening
 - good morning
 - good afternoon
+- hi
+- hi
+- hi
 
 ## intent:inform
 - for [Delhi](city)
@@ -680,6 +683,56 @@
 - [Lichtenrade](city)
 - [Mumbai](city)
 - [Nagpur](city)
+- [Pune](city)
+- [Nagpur](city)
+- [Saint Charles](city)
+- [Orebro](city)
+- [Pune](city)
+
+## intent:insult
+- unhappy
+- bad
+- very bad
+- awful
+- terrible
+- not very good
+- ok then you cant help me
+- that was shit, you're not helping
+- you can't help me
+- you can't help me with what i need
+- i guess you can't help me then
+- ok i guess you can't help me
+- that's not what i want
+- ok, but that doesnt help me
+- this is leading to nothing
+- this conversation is not really helpful
+- you cannot help me with what I want
+- I think you cant help me
+- hm i don't think you can do what i want
+- stop
+- stop go back
+- do you get anything?
+- and you call yourself bot company? pff
+- and that's it?
+- nothing else?
+- you're a loser lmao
+- i do not care how are you
+- stop it, i do not care!!!
+- shit bot
+- this is a really frustrating experience
+- shit
+- you are a stupid bot
+- is it a wasteland full of broken robot parts?
+- you're rather dull
+- go back
+- you are annoying
+- you suck
+- i dont like bots
+- bad experience
+- you are bad
+- fuck you
+- you are not good
+- frustrating
 
 ## intent:out_of_scope
 - I want pizza
@@ -783,7 +836,9 @@
 - perfect
 - very good
 - great
-- amazing
+- wow
+- you are great
+- amazing 
 - wonderful
 - you are perfect
 - you made my day
@@ -813,6 +868,15 @@
 - Thanks!
 - cool thanks
 - thanks!
+- you are great
+
+## intent:search_rain
+- will it rain today
+- do I need umbrella today
+- is it humid outside at [Saint-Louis](city)
+- I think it will rain at [Redan](city)
+- Is it a rainy day in [Port Loko](city)
+- will it rain today in [Patna](city)
 
 ## intent:search_temperature
 - what is current temperature
@@ -832,20 +896,22 @@
 - What is the temperature today?
 - Is it hot or cold at [mumbai](city)?
 - Will we build a snowman today?
-- is it sunny 
+- is it sunny
 - is it hot in [pune](city)
+- Orebro is hot today
+- [Orebro](city) is hot today
 
 ## intent:search_weather
 - what is the current weather
-- what is the weather for [Pune](city)
+- what is the weather for [Richmond](city)
 - what is current weather for [Patna](city)
 - tell me weather for [Mumbai](city)
 - weather for [Delhi](city)
 - weather for [London](city)
-- what is weather for [Pune](city)
-- what is the weather for [Pune](city)
+- what is weather for [Pearl City](city)
+- what is the weather for [Sahibganj](city)
 - current weather for [Pune](city)
-- what is current weather for [London](city)
+- what is current weather for [Parkland](city)
 - what is current weather
 - what is current weather for [Nagpur](city)
 - weather for [Pune](city)
@@ -858,62 +924,15 @@
 - Nice day out today?
 - Looks like a beautiful day hey?
 - what"s the weather
-- whats the weather in [Berlin](city)?
+- whats the weather in [Oregon City](city)?
 - how's the weather in [Berlin](city)
-- how is the weather in [berlin](city)?
+- how is the weather in [Palestrina](city)?
 - what's the weather today?
 - how's the weather?
 - Are there any meteorological changes that I need to be aware of?
+- what is current weather
+- what is the weather report for [Pulwama](city)
+- I am going to [Oklahoma City](city)
 
-## intent:search_rain
-- will it rain today
-- do I need umbrella today
-- is it humid outside
-- I think it will rain
-- 
-
-## intent:insult
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- ok then you cant help me
-- that was shit, you're not helping
-- you can't help me
-- you can't help me with what i need
-- i guess you can't help me then
-- ok i guess you can't help me
-- that's not what i want
-- ok, but that doesnt help me
-- this is leading to nothing
-- this conversation is not really helpful
-- you cannot help me with what I want
-- I think you cant help me
-- hm i don't think you can do what i want
-- stop
-- stop go back
-- do you get anything?
-- and you call yourself bot company? pff
-- and that's it?
-- nothing else?
-- you're a loser lmao
-- i do not care how are you
-- stop it, i do not care!!!
-- shit bot
-- this is a really frustrating experience
-- shit
-- you are a stupid bot
-- is it a wasteland full of broken robot parts?
-- you're rather dull
-- go back
-- you are annoying
-- you suck
-- i dont like bots
-- bad experience
-- you are bad
-- fuck you
-- you are not good
-- frustrating
-
+## lookup:city
+  data/city_list.txt

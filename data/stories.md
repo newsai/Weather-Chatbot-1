@@ -39,6 +39,11 @@
     - form{"name": null}
 * praise
   - utter_praise
+* search_rain
+    - rain_form
+    - form{"name": "rain_form"}
+    - form{"name": null}
+ 
 
 ##story_chitchat
 * greet
@@ -297,3 +302,125 @@
     - action_chitchat
 * out_of_scope
   - action_default_fallback
+
+## interactive_RAIN
+* greet
+    - utter_greet
+* search_rain
+    - rain_form
+    - form{"name": "rain_form"}
+    - slot{"requested_slot": "city"}
+* form: inform{"city": "Pune"}
+    - slot{"city": "Pune"}
+    - form: rain_form
+    - slot{"city": "Pune"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* search_weather
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"requested_slot": "city"}
+* form: inform{"city": "Nagpur"}
+    - slot{"city": "Nagpur"}
+    - form: weather_form
+    - slot{"city": "Nagpur"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+* search_rain
+    - rain_form
+    - form{"name": "rain_form"}
+    - slot{"requested_slot": "city"}
+* form: inform{"city": "Saint Charles"}
+    - slot{"city": "Saint Charles"}
+    - form: rain_form
+    - slot{"city": "Saint Charles"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* search_rain
+    - rain_form
+    - form{"name": "rain_form"}
+    - slot{"requested_slot": "city"}
+* form: search_rain{"city": "Redwood City"}
+    - slot{"city": "Redwood City"}
+    - form: rain_form
+    - slot{"city": "Redwood City"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* ask_howdoing
+    - action_chitchat
+* search_weather{"city": "Pulwama"}
+    - slot{"city": "Pulwama"}
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"city": "Pulwama"}
+    - slot{"city": "Pulwama"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* search_temperature
+    - temperature_form
+    - form{"name": "temperature_form"}
+    - slot{"requested_slot": "city"}
+* form: inform{"city": "Orebro"}
+    - slot{"city": "Orebro"}
+    - form: temperature_form
+    - slot{"city": "Orebro"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* search_temperature{"city": "Orebro"}
+    - slot{"city": "Orebro"}
+    - temperature_form
+    - form{"name": "temperature_form"}
+    - slot{"city": "Orebro"}
+    - slot{"city": "Orebro"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* search_weather{"city": "Oklahoma City"}
+    - slot{"city": "Oklahoma City"}
+    - weather_form
+    - form{"name": "weather_form"}
+    - slot{"city": "Oklahoma City"}
+    - slot{"city": "Oklahoma City"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+
+## interactive_story_1
+* greet
+    - utter_greet
+* search_rain
+    - rain_form
+    - form{"name": "rain_form"}
+    - slot{"requested_slot": "city"}
+* form: inform{"city": "Pune"}
+    - slot{"city": "Pune"}
+    - form: rain_form
+    - slot{"city": "Pune"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* search_rain{"city": "Patna"}
+    - slot{"city": "Patna"}
+    - rain_form
+    - form{"name": "rain_form"}
+    - slot{"city": "Patna"}
+    - slot{"city": "Patna"}
+    - slot{"city": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* praise
+    - utter_praise
+* goodbye
+    - utter_goodbye
