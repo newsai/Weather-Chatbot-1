@@ -1,3 +1,6 @@
+## lookup:city
+   data/city_list.txt
+   
 ## intent:affirm
 - yes
 - indeed
@@ -861,6 +864,13 @@
 - what's the weather today?
 - how's the weather?
 - Are there any meteorological changes that I need to be aware of?
+
+## intent:search_rain
+- will it rain today
+- do I need umbrella today
+- is it humid outside
+- I think it will rain
+- 
 
 ## intent:insult
 - unhappy
