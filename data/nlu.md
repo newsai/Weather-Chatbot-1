@@ -1,6 +1,76 @@
 ## lookup:city
    data/city_list.txt
+
+## intent:greet
+- Hi
+- Hey
+- Hi bot
+- Hey bot
+- Hello
+- Good morning
+- hi again
+- hi folks
+- hi Mister
+- hi pal!
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+- hallo
+- heeey
+- hi hi
+- hey
+- hey hey
+- hello there
+- hi
+- hello
+- yo
+- hola
+- hi?
+- hey bot!
+- hello friend
+- good morning
+- hii
+- hello sweet boy
+- yoo
+- hey there
+- hiihihi
+- hello sweatheart
+- hellooo
+- helloooo
+- heyo
+- ayyyy whaddup
+- hello?
+- Hallo
+- heya
+- hey bot
+- howdy
+- Hellllooooooo
+- whats up
+- Hei
+- Well hello there ;)
+- I said, helllllloooooO!!!!
+- Heya
+- Whats up my bot
+- hiii
+- heyho
+- hey, let's talk
+- hey let's talk
+- jojojo
+- hey dude
+- hello it is me again
+- what up
+- hi there
+- hi
+- jop
+- hi friend
+- hi there it's me
+- good evening
+- good morning
+- good afternoon
    
+
 ## intent:affirm
 - yes
 - indeed
@@ -322,64 +392,6 @@
 - What time is it right now?
 - what is time
 
-## intent:ask_weather
-- What is the weather at your place?
-- Do you have good weather?
-- Is it raining?
-- What's it like out there?
-- What's the weather forecast?
-- Will I require my raincoat today?
-- What is the weather for tomorrow?
-- Can we expect any thunderstorms?
-- Will the skies be clear today?
-- Are we in for a scorcher?
-- Is it humid out there today?
-- whats the weather like tomorrow
-- hows the weather in bot world
-- what's the weather like where you are?
-- is the sun out where you are?
-- is the sun out where zou are?
-
-## intent:ask_whatismyname
-- what is my name?
-- May i know my name?
-- What is my name?
-- What do I call myself?
-- Tell me my name.
-- Explain my name to me.
-- What could be my name?
-- What name do I go by?
-- What name should I recognize for myself?
-- what's my name?
-- can you tell me my name?
-- What is my name?
-- Do I have a name?
-- Do I have a name? What is it?
-- What was I named?
-- Say my name.
-- Do you know my name?
-- What do people call me?
-- Can you tell me my name?
-- What else do people call me?
-- I have a name, what is it?
-- Tell me my name
-- I'd like to know my name
-- Inform me what my name is
-- Please let me know what my name is
-- Can you tell me what I am called?
-- I'd like to know what my name is
-- What is the name I was given?
-- What does everyone call me?
-- What am I called?
-- What did my parents name me?
-- What do my colleagues call me?
-- What would be the name on my tombstone?
-- Do you know what my name is?
-- What is my first name?
-- What is my full name?
-- What do people call me?
-- What exactly is my name?
-
 ## intent:ask_whatspossible
 - help
 - help please
@@ -466,35 +478,6 @@
 - What's the name of the place you came from?
 - where are you from
 
-## intent:ask_whoami
-- Who am I?
-- Okay who am I?
-- WHo am I
-- Tell me who am I?
-- Tell me who I am?
-- Do you know who I am?
-- Can you tell me who I am?
-- How do I discover who I am?
-- How can I determine who I am?
-- Do you know who am I?
-- Can you tell me who am I?
-- How do I discover who am I?
-- How can I determine who am I?
-- who are I ?
-- who may i ?
-- Shall i know who am i?
-- Tell me who I am.
-- How do I identify myself?
-- Who could I be?
-- tell me who I am?
-- what's my identity?
-- tell me what my identity is?
-- can you tell me what I am?
-- can you tell me what my identity is?
-- can you tell me who I am?
-- who am i
-- who am I?
-
 ## intent:ask_whoisit
 - who is this
 - who am i talking to
@@ -514,6 +497,7 @@
 - who are you
 - I want to know who you are
 - who are y
+- are you a computer
 - yes but who are you in your heart
 - are you a bot?
 - who is this?
@@ -594,92 +578,23 @@
 - tschüssikowski
 - bye!
 
-## intent:greet
-- Hi
-- Hey
-- Hi bot
-- Hey bot
-- Hello
-- Good morning
-- hi again
-- hi folks
-- hi Mister
-- hi pal!
-- hi there
-- greetings
-- hello everybody
-- hello is anybody there
-- hello robot
-- hallo
-- heeey
-- hi hi
-- hey
-- hey hey
-- hello there
-- hi
-- hello
-- yo
-- hola
-- hi?
-- hey bot!
-- hello friend
-- good morning
-- hii
-- hello sweet boy
-- yoo
-- hey there
-- hiihihi
-- hello sweatheart
-- hellooo
-- helloooo
-- heyo
-- ayyyy whaddup
-- hello?
-- Hallo
-- heya
-- hey bot
-- howdy
-- Hellllooooooo
-- whats up
-- Hei
-- Well hello there ;)
-- I said, helllllloooooO!!!!
-- Heya
-- Whats up my bot
-- hiii
-- heyho
-- hey, let's talk
-- hey let's talk
-- jojojo
-- hey dude
-- hello it is me again
-- what up
-- hi there
-- hi
-- jop
-- hi friend
-- hi there it's me
-- good evening
-- good morning
-- good afternoon
-
 ## intent:inform
-- for [Delhi](city)
-- [Punjab](city)
-- search for [Noida](city)
-- search for [Noida](city) location
-- city is [Nagpur](city)
-- for [Pune](city) location
+- for [delhi](city)
+- [punjab](city)
+- search for [noida](city)
+- search for [noida](city) location
+- city is [nagpur](city)
+- for [pune](city) location
 - I am looking for [Mumbai](city)
 - [Pune](city)
-- search for [Mumbai](city)
+- search for [mumbai](city)
 - [Gorkhā](city)
 - [Pune](city)
-- for [Nagpur](city)
-- [Mumbai](city)
+- for [nagpur](city)
+- [mumbai](city)
 - [Lichtenrade](city)
-- [Mumbai](city)
-- [Nagpur](city)
+- [chennai](city)
+- [nagpur](city)
 
 ## intent:out_of_scope
 - I want pizza
@@ -916,4 +831,7 @@
 - fuck you
 - you are not good
 - frustrating
+- fuck off
+- fuckoff
+- you are an asshole
 
