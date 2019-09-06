@@ -54,6 +54,8 @@
     - action_chitchat
 * ask_isbot
     - action_chitchat
+* insult
+  - utter_handleinsult
 * ask_languagesbot
     - action_chitchat
 * ask_time

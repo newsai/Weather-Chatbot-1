@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 class WeatherSearch(object):
     def __init__(self):
-        self.api_id = 'XXXX'
+        self.api_id = 'XXX'
 
     def searchByName(self, city_name):
         # do search here
@@ -111,6 +111,29 @@ class TemperatureAction(FormAction):
         if result['cod'] == 200:
             result_dict = bot_util.create_message(result)
             dispatcher.utter_message('Temperature for {} is {:4.2f} C'.format(city, int(result_dict['temp']) -273.15))
+        else:
+            dispatcher.utter_message(result['message'])
+        return [SlotSet("city", None)]
+
+
+class RainAction(FormAction):
+    def name(self):  # type: () -> Text
+        return "rain_form"
+
+    @staticmethod
+    def required_slots(tracker):  # type: (Tracker) -> List[Text]
+        return ["city"]
+
+    def submit(self, dispatcher, tracker,
+               domain):  # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
+        weather_info = WeatherSearch()
+        city = tracker.get_slot('city')
+        result = weather_info.searchByName(city)
+        logger.info('Result from API:{}'.format(result))
+        if result['cod'] == 200:
+            result_dict = bot_util.create_message(result)
+            dispatcher.utter_message('Weather for for {} is {}. Humidity level is {} %'.format(
+                city, result_dict['weather'],result_dict['humidity']))
         else:
             dispatcher.utter_message(result['message'])
         return [SlotSet("city", None)]

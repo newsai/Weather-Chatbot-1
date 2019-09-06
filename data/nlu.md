@@ -842,6 +842,9 @@
 - what is current weather
 - what is the weather report for [Pulwama](city)
 - I am going to [Oklahoma City](city)
+- weather report
+- how is weather
+
 
 ## intent:search_rain
 - will it rain today
