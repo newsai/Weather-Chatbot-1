@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 class WeatherSearch(object):
     def __init__(self):
-        self.api_id = 'XXX'
+        self.api_id = '4b62212a7c3d8f875242e0fe492748c7'
 
     def searchByName(self, city_name):
         # do search here
